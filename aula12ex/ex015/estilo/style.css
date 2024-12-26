@@ -2,9 +2,14 @@
 body {
     background-color: rgb(96, 96, 185);
     font-family: Arial, Helvetica, sans-serif;
-    width: 97vw;
-    overflow-x: hidden;
     
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
 }
 header {
 color: white;
@@ -13,21 +18,15 @@ text-align: center;
 }
 
 section {
-    width: 97vw;
     background-color: white;
     border-radius: 10px;
     padding: 15px;
     width: 500px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.422);
-}
-
-div {
-    text-align: center;
-    padding: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.488);
 }
 footer {
-    color:white;
+    color: white;
     text-align: center;
     font-style: italic;
 }
