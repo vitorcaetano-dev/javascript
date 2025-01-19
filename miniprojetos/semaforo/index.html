@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semaforo</title>
+    <style>
+        div.semaforo {
+            margin: 20% auto;
+            width: 150px;
+            height: 400px;
+            background-color: #000000;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        div.semaforo div {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        #iverm {
+            background-color: rgb(147, 0, 0);
+        }
+        #iamar {
+            background-color: rgb(139, 139, 0);
+        }
+        #iverde {
+            background-color: rgb(0, 86, 0);
+        }
+        </style>
+</head>
+<body>
+    
+        <div class="semaforo">
+            <div id="iverm"></div>
+            <div id="iamar"></div>
+            <div id="iverde"></div>
+        </div>
+    <div>
+        <button>vermelho</button>
+        <button>amarelo
+        <button>verde</button>
+        
+    </div>
+</body>
+</html>

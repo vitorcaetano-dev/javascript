@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mudar cor</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.previw  {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid black ;
+        }
+        h1 {
+                    text-align: center;
+              } 
+
+            div#conteiner {
+            margin: auto;
+            width: 80%;
+            display: flex;
+            flex-flow: row wrap;
+            flex: 1 0 190px;
+        }
+        
+        
+        div#conteiner > div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 5px;
+            color: whitesmoke;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <h1>teste cor</h1>
+   <input type="range" name="" id="red" max="255" oninput="mudarcor()"> <div class="previw" id="corverm"></div> <br>
+   <input type="range" name="" id="green" max="255" oninput="mudarcor()">
+   <div class="previw" id="corverd"></div> <br>
+   <input type="range" name="" id="blue" max="255" oninput="mudarcor()"> 
+   <div class="previw" id="corazul"></div>  
+   <button onclick="addcor()">adicionar cor</button> 
+   <button onclick="remcor()">remover cor</button>
+
+
+   <div id="conteiner">
+    
+    
+   </div>
+    <script>
+       
+        let vermelho = document.getElementById("red")
+        let verde = document.getElementById("green")
+        let azul = document.getElementById("blue")
+        let corpo = document.getElementById("corpo")
+        //errei e colocar dentro do rbg() sem colocar value, mas o onclick no input foi bom.
+        function mudarcor() {
+            let r = vermelho.value
+            let g = verde.value
+            let b = azul.value
+            corpo.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+
+        let verm = document.getElementById("corverm")
+        let verd = document.getElementById("corverd")
+        let azulu = document.getElementById("corazul")
+
+        verm.style.backgroundColor = `rgb(${r}, 1 ,1)`
+        verd.style.backgroundColor = `rgb(1, ${g} ,1)`
+        azulu.style.backgroundColor = `rgb(1, 1 ,${b})`
+
+        }
+        let novacor1 = document.createElement("div")
+        let conteiner = document.getElementById("conteiner")
+
+        
+        function addcor(){
+       
+        let novacor = novacor1
+        
+        let r = vermelho.value
+            let g = verde.value
+            let b = azul.value
+            novacor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+            novacor.innerHTML = `rgb(${r}, ${g}, ${b})`
+            conteiner.appendChild(novacor)
+            
+            document.body.style.backgroundColor = '#fff'
+        }   
+
+        
+    </script>
+</body>
+</html>
